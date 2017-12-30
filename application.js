@@ -19,6 +19,10 @@ var twittlerActivity = function(){
 
 
 $(document).ready(function(){
+
+  for(i in streams.users){
+    $('.following').append($('<a class=\'user\'>' + '@' + String(i) +'</a>'));
+  }
   
   twittlerStream = setInterval(twittlerActivity,100);
 
@@ -27,9 +31,9 @@ $(document).ready(function(){
       clearInterval(twittlerStream);
       $('.tweet').hide();
       $('.tweet:contains('+ $(this).text() +')').show()
-      //$('.tweet').filter($('.tweet').find('.user').text($(this).text())).show();
   });
 
+  //click header to resume twittler Activity
   $('h1').on('click', function(){
     $('.tweet').show();
     twittlerStream = setInterval(twittlerActivity,100);

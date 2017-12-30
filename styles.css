@@ -1,23 +1,60 @@
+body{
+	margin: 0px 0px 0px 0px;
+
+}
+
 h1{
 	background-color: #CD80FF;
 	font-family: courier new;
+	font-size: 70px;
+	margin-top: inherit;
+	height: 100px;
+	padding: 15px 0px 0px 25px;
+}
+
+.tweetSection{
+	margin-left: 260px;
+}
+
+.following{
+	border-radius: 15px;
+	height: 600px;
+	width: 230px;
+	margin-left:10px;
+	float: left;
+	padding-left: 10px;
+	background-color: lightgrey
 }
 
 .tweet{
+	border-radius: 15px;
 	display: none;
+	margin-left:30px;
+	margin-top:10px;
+	padding-left: 20px;
+	width: 600px;
+	height: 150px;
+	background-color: lightgrey;
 }
 
 .user{
+	margin-bottom: 0px;
+	display: inline-block;
+	font-size: 30px;
 
 }
 
 .message{
 	font-weight: bold;
-	
+	margin-top: 0px;
+	margin-bottom:0px;
+	font-size: 25px;
 }
 
 
 .timeSig{
 	font-style: italic;
 	color: grey;
+	margin-top:0px;
+	margin-bottom:0px;
 }
