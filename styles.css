@@ -1,9 +1,23 @@
 h1{
 	background-color: #CD80FF;
 	font-family: courier new;
+}
+
+.tweet{
+	display: none;
+}
+
+.user{
 
 }
-.tweet{
-	display: none
+
+.message{
+	font-weight: bold;
 	
+}
+
+
+.timeSig{
+	font-style: italic;
+	color: grey;
 }
