@@ -2,6 +2,7 @@ var $tweets = $('.tweetSection');
 var index = streams.home.length - 1;
 var latestTweetIndex = 0;
 var twittlerStream;
+var interval = true;
 
 var twittlerActivity = function(){
     index = streams.home.length - 1;
@@ -20,23 +21,33 @@ var twittlerActivity = function(){
 
 $(document).ready(function(){
 
+  //set up followers list
   for(i in streams.users){
     $('.following').append($('<a class=\'user\'>' + '@' + String(i) +'</a>'));
   }
   
   twittlerStream = setInterval(twittlerActivity,100);
 
-  //View Single User
+  //View Single User's feed
   $('body').on('click','.user', function(){
+    if (interval){
       clearInterval(twittlerStream);
+      interval = false
+    }
+      $('#back').show();
       $('.tweet').hide();
-      $('.tweet:contains('+ $(this).text() +')').show()
+      $('.tweet:contains('+ $(this).text() +')').show();
+    
   });
 
-  //click header to resume twittler Activity
-  $('h1').on('click', function(){
-    $('.tweet').show();
-    twittlerStream = setInterval(twittlerActivity,100);
+  //click back button to resume twittler Activity
+  $('#back').on('click', function(){
+    if(!interval){
+      $('.tweet').show();
+      twittlerStream = setInterval(twittlerActivity,100);
+      interval = true;    
+      $('#back').hide();
+    }
   });
 
 });

@@ -9,7 +9,13 @@ h1{
 	font-size: 70px;
 	margin-top: inherit;
 	height: 100px;
+	width: 150%;
 	padding: 15px 0px 0px 25px;
+}
+
+#back{
+	margin-left: 40px;
+	display: none;
 }
 
 .tweetSection{
@@ -23,7 +29,7 @@ h1{
 	margin-left:10px;
 	float: left;
 	padding-left: 10px;
-	background-color: lightgrey
+	background-color: #CEC7D9;
 }
 
 .tweet{
@@ -34,7 +40,11 @@ h1{
 	padding-left: 20px;
 	width: 600px;
 	height: 150px;
-	background-color: lightgrey;
+	background-color: #CEC7D9;
+}
+.tweet:hover{
+	background-color: #DBBEF8
+	
 }
 
 .user{
@@ -42,6 +52,9 @@ h1{
 	display: inline-block;
 	font-size: 30px;
 
+}
+.user:hover{
+	color:#CD80FF;
 }
 
 .message{
